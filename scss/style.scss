@@ -1,10 +1,10 @@
-@import 'bourbon'; // http://bourbon.io/
+@import 'bourbon/bourbon'; // http://bourbon.io/
 
-@import '../partials/variables'; // colors, fonts etc...
+@import 'partials/variables'; // colors, fonts etc...
 
-@import '../partials/layout'; // responsive grid and media queries
+@import 'partials/layout'; // responsive grid and media queries
 
-/* -------------------------------- 
+/* --------------------------------
 
 Primary style
 
@@ -60,9 +60,9 @@ input[type="search"]::-webkit-search-results-decoration {
   display: none;
 }
 
-/* -------------------------------- 
+/* --------------------------------
 
-Main components 
+Main components
 
 -------------------------------- */
 
@@ -489,10 +489,9 @@ Main components
 
 	.cd-primary-nav {
 		position: static;
-		padding: 0 150px 0 0;
+		padding: 0 0 0 27%;
 		height: auto;
 		width: auto;
-		float: right;
 		overflow: visible;
 		background: transparent;
 		@include clearfix;
@@ -623,7 +622,6 @@ Main components
 				/* here you set the number of columns - use width percentage */
 				@include column(.23); // see partials > _layout.scss
 				margin-right: 2.66%;
-				border-right: 1px solid $color-3;
 				overflow: hidden;
 				overflow-x: hidden;
 				overflow-y: auto;
@@ -863,7 +861,7 @@ Main components
 		&.selected::after {
 			@include transform(rotate(45deg));
 		}
-	} 
+	}
 
 	.cd-secondary-nav > .has-children > a::before, .cd-secondary-nav > .has-children > a::after {
 		/* remove arrows on secondary nav titles */
@@ -938,7 +936,7 @@ Main components
 			font-weight: 300;
 
 			@include placeholder {
-				
+
 			}
 		}
 	}
@@ -958,7 +956,7 @@ Main components
 	opacity: 0;
 	@include backface-visibility(hidden);
 	@include transition(opacity .3s 0s, visibility 0s .3s, transform .3s 0s);
-	
+
 	&.is-visible {
 		opacity: 1;
 		visibility: visible;
@@ -978,9 +976,9 @@ Main components
 	}
 }
 
-/* -------------------------------- 
+/* --------------------------------
 
-support for no js 
+support for no js
 
 -------------------------------- */
 
