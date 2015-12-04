@@ -1,6 +1,6 @@
-@import 'bourbon/bourbon'; // http://bourbon.io/
-
 @import 'partials/variables'; // colors, fonts etc...
+
+@import 'bourbon/bourbon'; // http://bourbon.io/
 
 @import 'partials/layout'; // responsive grid and media queries
 
@@ -524,7 +524,7 @@ Main components
 
 		> li {
 			float: left;
-			margin-left: 3em;
+			margin-left: 2rem;
 		}
 
 		> li > a {
@@ -540,12 +540,12 @@ Main components
 			@include transition(color .3s, box-shadow .3s);
 
 			&:hover {
-				color: $color-2;
+				color: $brand-red;
 			}
 
 			&.selected {
-				color: $color-2;
-				box-shadow: inset 0 -2px 0 $color-2;
+				color: $brand-red;
+				// box-shadow: inset 0 -2px 0 $color-2;
 			}
 		}
 
@@ -559,8 +559,9 @@ Main components
 			top: $header-height-L;
 			width: 100vw;
 			background: $color-4;
-			padding: 48px 64px 130px;
-			box-shadow: inset 0 1px 0 $color-3, 0 3px 6px rgba(#000, .05);
+
+			// Controls secondary nav padding
+			padding: 18px 64px 130px 40.5%;
 			@include transform(translateX(0));
 			@include clearfix;
 			-webkit-transition: opacity .3s 0s, visibility 0s 0s;
@@ -620,8 +621,8 @@ Main components
 				/* change the height according to your needs - you can even set height: auto */
 				height: 340px;
 				/* here you set the number of columns - use width percentage */
-				@include column(.23); // see partials > _layout.scss
-				margin-right: 2.66%;
+				@include column(.17); // see partials > _layout.scss
+				// margin-right: 2.66%;
 				overflow: hidden;
 				overflow-x: hidden;
 				overflow-y: auto;
@@ -651,7 +652,7 @@ Main components
 				font-size: 1.4rem;
 
 				&:hover {
-					color: $color-2;
+					color: $brand-red;
 				}
 			}
 
@@ -951,7 +952,7 @@ Main components
 	top: 0;
 	left: 0;
 	cursor: pointer;
-	background-color: rgba($color-2, .8);
+	background-color: rgba($color-4, .8);
 	visibility: hidden;
 	opacity: 0;
 	@include backface-visibility(hidden);
