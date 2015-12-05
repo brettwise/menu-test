@@ -1,7 +1,9 @@
 // breakpoints
 
+
 $S:     480px;
 $M:     768px;
+// If you change the $L breakpoint below be sure to update it in main.js as well. `var MqL =` is what you want to update.
 $L:     1170px;
 $maxL:    $L - 1px;
 
