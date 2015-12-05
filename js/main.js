@@ -25,14 +25,7 @@ jQuery(document).ready(function($){
 		}
 	});
 
-	//open search form
-	$('.cd-search-trigger').on('click', function(event){
-		event.preventDefault();
-		toggleSearch();
-		closeNav();
-	});
-
-	//close lateral menu on mobile 
+	//close lateral menu on mobile
 	$('.cd-overlay').on('swiperight', function(){
 		if($('.cd-primary-nav').hasClass('nav-is-visible')) {
 			closeNav();
@@ -52,7 +45,7 @@ jQuery(document).ready(function($){
 	});
 
 
-	//prevent default clicking on direct children of .cd-primary-nav 
+	//prevent default clicking on direct children of .cd-primary-nav
 	$('.cd-primary-nav').children('.has-children').children('a').on('click', function(event){
 		event.preventDefault();
 	});
@@ -91,7 +84,7 @@ jQuery(document).ready(function($){
 
 	function toggleSearch(type) {
 		if(type=="close") {
-			//close serach 
+			//close serach
 			$('.cd-search').removeClass('is-visible');
 			$('.cd-search-trigger').removeClass('search-is-visible');
 			$('.cd-overlay').removeClass('search-is-visible');
@@ -107,7 +100,7 @@ jQuery(document).ready(function($){
 
 	function checkWindowWidth() {
 		//check window width (scrollbar included)
-		var e = window, 
+		var e = window,
             a = 'inner';
         if (!('innerWidth' in window )) {
             a = 'client';
