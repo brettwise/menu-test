@@ -7,6 +7,11 @@ jQuery(document).ready(function($){
 		(!window.requestAnimationFrame) ? setTimeout(moveNavigation, 300) : window.requestAnimationFrame(moveNavigation);
 	});
 
+	// Instantiating Fast Click https://github.com/ftlabs/fastclick
+	$(function() {
+    FastClick.attach(document.body);
+	});
+	
 	//mobile - open lateral menu clicking on the menu icon
 	$('.cd-nav-trigger').on('click', function(event){
 		event.preventDefault();
