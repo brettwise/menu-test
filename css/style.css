@@ -384,7 +384,7 @@ Main components
         color: #F4364C; }
     .cd-primary-nav .go-back, .cd-primary-nav .see-all {
       display: none; }
-    .cd-primary-nav .cd-secondary-nav, .cd-primary-nav .cd-nav-gallery, .cd-primary-nav .cd-nav-icons {
+    .cd-primary-nav .cd-secondary-nav, .cd-primary-nav .cd-nav-gallery, .cd-primary-nav .cd-nav-icons, .cd-primary-nav .single-level-nav {
       /* dropdown menu style */
       position: absolute;
       top: 80px;
@@ -399,16 +399,58 @@ Main components
       -webkit-transition: opacity .3s 0s, visibility 0s 0s;
       -moz-transition: opacity .3s 0s, visibility 0s 0s;
       transition: opacity .3s 0s, visibility 0s 0s; }
-      .cd-primary-nav .cd-secondary-nav::after, .cd-primary-nav .cd-nav-gallery::after, .cd-primary-nav .cd-nav-icons::after {
+      .cd-primary-nav .cd-secondary-nav::after, .cd-primary-nav .cd-nav-gallery::after, .cd-primary-nav .cd-nav-icons::after, .cd-primary-nav .single-level-nav::after {
         clear: both;
         content: "";
         display: table; }
-      .cd-primary-nav .cd-secondary-nav.is-hidden, .cd-primary-nav .cd-nav-gallery.is-hidden, .cd-primary-nav .cd-nav-icons.is-hidden {
+      .cd-primary-nav .cd-secondary-nav.is-hidden, .cd-primary-nav .cd-nav-gallery.is-hidden, .cd-primary-nav .cd-nav-icons.is-hidden, .cd-primary-nav .single-level-nav.is-hidden {
         opacity: 0;
         visibility: hidden;
         -webkit-transition: opacity .3s 0s, visibility 0s .3s;
         -moz-transition: opacity .3s 0s, visibility 0s .3s;
         transition: opacity .3s 0s, visibility 0s .3s; }
+    .cd-primary-nav .single-level-nav a {
+      height: 30px;
+      line-height: 30px;
+      padding: 0 18% 0 0;
+      color: #0072CE;
+      border-bottom: none;
+      font-size: 1.4rem; }
+      .cd-primary-nav .single-level-nav a:hover {
+        color: #F4364C; }
+    .cd-primary-nav .single-level-nav ul {
+      /* Force Hardware Acceleration in WebKit */
+      -webkit-transform: translateZ(0);
+      -moz-transform: translateZ(0);
+      -ms-transform: translateZ(0);
+      -o-transform: translateZ(0);
+      transform: translateZ(0); }
+    .cd-primary-nav .single-level-nav ul ul {
+      /* tertiary navigation */
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%; }
+      .cd-primary-nav .single-level-nav ul ul.is-hidden {
+        -webkit-transform: translateX(100%);
+        -moz-transform: translateX(100%);
+        -ms-transform: translateX(100%);
+        -o-transform: translateX(100%);
+        transform: translateX(100%); }
+      .cd-primary-nav .single-level-nav ul ul .go-back {
+        display: block; }
+        .cd-primary-nav .single-level-nav ul ul .go-back a {
+          color: transparent; }
+      .cd-primary-nav .single-level-nav ul ul .see-all {
+        display: block; }
+    .cd-primary-nav .single-level-nav .moves-out > li > a {
+      /* push the navigation items to the left - and lower down opacity - when tertiary nav slides in */
+      -webkit-transform: translateX(-100%);
+      -moz-transform: translateX(-100%);
+      -ms-transform: translateX(-100%);
+      -o-transform: translateX(-100%);
+      transform: translateX(-100%); }
     .cd-primary-nav .cd-secondary-nav > li {
       /* change the height according to your needs - you can even set height: auto */
       height: 340px;

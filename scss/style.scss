@@ -440,7 +440,7 @@ Main components
 			display: none;
 		}
 
-		.cd-secondary-nav, .cd-nav-gallery, .cd-nav-icons {
+		.cd-secondary-nav, .cd-nav-gallery, .cd-nav-icons, .single-level-nav {
 			/* dropdown menu style */
 			position: absolute;
 			top: $header-height-L;
@@ -461,6 +461,56 @@ Main components
 				-webkit-transition: opacity .3s 0s, visibility 0s .3s;
 				-moz-transition: opacity .3s 0s, visibility 0s .3s;
 				transition: opacity .3s 0s, visibility 0s .3s;
+			}
+		}
+
+		.single-level-nav {
+			a {
+				height: 30px;
+				line-height: 30px;
+				padding: 0 18% 0 0;
+				color: $color-1;
+				border-bottom: none;
+				font-size: 1.4rem;
+
+				&:hover {
+					color: $brand-red;
+				}
+			}
+
+			ul {
+				/* Force Hardware Acceleration in WebKit */
+				@include transform(translateZ(0));
+			}
+
+			ul ul {
+				/* tertiary navigation */
+				position: absolute;
+				top: 0;
+				left: 0;
+				height: 100%;
+				width: 100%;
+
+				&.is-hidden {
+					@include transform(translateX(100%));
+				}
+
+				.go-back {
+					display: block;
+
+					a {
+						color: transparent;
+					}
+				}
+
+				.see-all {
+					display: block;
+				}
+			}
+
+			.moves-out > li > a {
+				/* push the navigation items to the left - and lower down opacity - when tertiary nav slides in */
+				@include transform(translateX(-100%));
 			}
 		}
 
